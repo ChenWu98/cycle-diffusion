@@ -11,7 +11,7 @@ Our formalization and derivation are purely by definition, while we show that so
 1. Zero-shot image-to-image translation with text-to-image diffusion models such as Stable Diffusion. 
 2. Traditional unpaired image-to-image translation with diffusion models trained on two related domains.
 
-Check our results on zero-shot image-to-image translation below! We formulate the task input as a triple $(\boldsymbol{x}, \boldsymbol{t}, \hat{\boldsymbol{t}})$:
+Check our results on zero-shot image-to-image translation below! We formulate the task input as a triplet $(\boldsymbol{x}, \boldsymbol{t}, \hat{\boldsymbol{t}})$:
 
 1. $\boldsymbol{x}$ is the source image, displayed with a purple margin.
 2. $\boldsymbol{t}$ is the source text, with text spans marked in purple.
