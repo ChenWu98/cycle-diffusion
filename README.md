@@ -1,5 +1,8 @@
 # CycleDiffusion: Text-to-Image Diffusion Models Are Image-to-Image Editors via Inferrring "Random Seed"
 
+## Note
+1. Paper will be arxived soon. 
+
 ## Overview
 We think the randomness in diffusion models is like magic! Accumulated evidence has shown that fixing the "random seed" helps diffusion models generate images from two image distributions with minimal differences. Our paper is exactly about **how to formalize this "random seed"** and **how to infer it from a given real image**. 
 
