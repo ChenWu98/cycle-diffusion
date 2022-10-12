@@ -10,7 +10,7 @@ _Preprint, Oct 2022_
 [**[Paper link]**](https://arxiv.org/abs/2210.05559)
 
 ## Note
-1. Paper will be arxived soon. 
+1. I am still updating the code. I will put a note here when everything is ready.  
 
 ## Overview
 We think the randomness in diffusion models is like magic! Accumulated evidence has shown that fixing the "random seed" helps diffusion models generate images from two image distributions with minimal differences. Our paper is exactly about **how to formalize this "random seed"** and **how to infer it from a given real image**. 
