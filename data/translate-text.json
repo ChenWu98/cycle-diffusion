@@ -1,0 +1,642 @@
+[
+    {
+        "encode_text": "A black bear is walking in the grass.",
+        "decode_text": "A black bear is walking in the grass next to red flowers.",
+        "img_path": "./data/prompt2prompt/bear.png"
+    },
+    {
+        "encode_text": "A black bear is walking in the grass.",
+        "decode_text": "A black bear is walking in the grass with snow on the ground.",
+        "img_path": "./data/prompt2prompt/bear.png"
+    },
+    {
+        "encode_text": "A black bear is walking in the grass.",
+        "decode_text": "A black bear is walking in the grass while another black bear is watching behind it.",
+        "img_path": "./data/prompt2prompt/bear.png"
+    },
+    {
+        "encode_text": "A black bear is walking in the grass.",
+        "decode_text": "Oil painting of a black bear is walking in the grass.",
+        "img_path": "./data/prompt2prompt/bear.png"
+    },
+    {
+        "encode_text": "A black bear is walking in the grass.",
+        "decode_text": "A black bear is walking in the grass. Makoto Shinkai.",
+        "img_path": "./data/prompt2prompt/bear.png"
+    },
+    {
+        "encode_text": "Landscape image of trees in a valley.",
+        "decode_text": "Landscape image of trees in a valley at fall.",
+        "img_path": "./data/prompt2prompt/trees.png"
+    },
+    {
+        "encode_text": "Landscape image of trees in a valley.",
+        "decode_text": "Landscape image of trees in a valley at winter.",
+        "img_path": "./data/prompt2prompt/trees.png"
+    },
+    {
+        "encode_text": "Landscape image of trees in a valley.",
+        "decode_text": "Landscape image of trees in a valley in a stormy day.",
+        "img_path": "./data/prompt2prompt/trees.png"
+    },
+    {
+        "encode_text": "Landscape image of trees in a valley.",
+        "decode_text": "Landscape image of trees in a valley at sunrise.",
+        "img_path": "./data/prompt2prompt/trees.png"
+    },
+    {
+        "encode_text": "Landscape image of trees in a valley.",
+        "decode_text": "Landscape image of trees in a valley at night.",
+        "img_path": "./data/prompt2prompt/trees.png"
+    },
+    {
+        "encode_text": "Landscape image of trees in a valley.",
+        "decode_text": "Landscape image of trees in a valley in a foggy day.",
+        "img_path": "./data/prompt2prompt/trees.png"
+    },
+    {
+        "encode_text": "A bear wearing sunglasses on and having a drink. Cartoon.",
+        "decode_text": "A bear wearing rounded sunglasses on and having a drink. Cartoon.",
+        "img_path": "./data/dalle2/A bear wearing sunglasses on and having a drink.png"
+    },
+    {
+        "encode_text": "A bear wearing sunglasses on and having a drink. Cartoon.",
+        "decode_text": "A bear wearing sunglasses on and having a coffee drink. Cartoon.",
+        "img_path": "./data/dalle2/A bear wearing sunglasses on and having a drink.png"
+    },
+    {
+        "encode_text": "A bear wearing sunglasses on and having a drink. Cartoon.",
+        "decode_text": "A bear wearing sunglasses on and having a beer drink. Cartoon.",
+        "img_path": "./data/dalle2/A bear wearing sunglasses on and having a drink.png"
+    },
+    {
+        "encode_text": "A car on the side of the street.",
+        "decode_text": "A sport car on the side of the street.",
+        "img_path": "./data/dalle2/A car on the side of the street.png"
+    },
+    {
+        "encode_text": "A car on the side of the street.",
+        "decode_text": "An old car on the side of the street.",
+        "img_path": "./data/dalle2/A car on the side of the street.png"
+    },
+    {
+        "encode_text": "A car on the side of the street.",
+        "decode_text": "A crushed car on the side of the street.",
+        "img_path": "./data/dalle2/A car on the side of the street.png"
+    },
+    {
+        "encode_text": "A car on the side of the street.",
+        "decode_text": "A limousine car on the side of the street.",
+        "img_path": "./data/dalle2/A car on the side of the street.png"
+    },
+    {
+        "encode_text": "A car on the side of the street.",
+        "decode_text": "A convertible car on the side of the street.",
+        "img_path": "./data/dalle2/A car on the side of the street.png"
+    },
+    {
+        "encode_text": "A car on the side of the street.",
+        "decode_text": "A car on the side of the street while another car driving by.",
+        "img_path": "./data/dalle2/A car on the side of the street.png"
+    },
+    {
+        "encode_text": "A photo of a face of a fox.",
+        "decode_text": "A photo of a face of a dog.",
+        "img_path": "./stargan-v2/data/test/wild/flickr_wild_000017.png"
+    },
+    {
+        "encode_text": "A photo of a face of a fox.",
+        "decode_text": "A photo of a face of a cat.",
+        "img_path": "./stargan-v2/data/test/wild/flickr_wild_000017.png"
+    },
+    {
+        "encode_text": "A photo of a face of a fox.",
+        "decode_text": "A photo of a face of a cute fox.",
+        "img_path": "./stargan-v2/data/test/wild/flickr_wild_000017.png"
+    },
+    {
+        "encode_text": "A photo of a face of a cat.",
+        "decode_text": "A photo of a face of a dog.",
+        "img_path": "./stargan-v2/data/test/cat/flickr_cat_000008.png"
+    },
+    {
+        "encode_text": "A photo of a face of a cat.",
+        "decode_text": "A photo of a face of a cat wearing a hat.",
+        "img_path": "./stargan-v2/data/test/cat/flickr_cat_000008.png"
+    },
+    {
+        "encode_text": "A photo of a face of a cat.",
+        "decode_text": "A photo of a face of a yawning cat.",
+        "img_path": "./stargan-v2/data/test/cat/flickr_cat_000008.png"
+    },
+    {
+        "encode_text": "A photo of a face of a cat.",
+        "decode_text": "A photo of a face of a cute cat.",
+        "img_path": "./stargan-v2/data/test/cat/flickr_cat_000008.png"
+    },
+    {
+        "encode_text": "A photo of a face of a cat.",
+        "decode_text": "A photo of a face of a tiger.",
+        "img_path": "./stargan-v2/data/test/cat/flickr_cat_000008.png"
+    },
+    {
+        "encode_text": "Photo of a girl. Underexposure.",
+        "decode_text": "Photo of a girl. Overexposure.",
+        "img_path": "./data/underexposure/kid.png"
+    },
+    {
+        "encode_text": "Photo of a lighthouse. Underexposure.",
+        "decode_text": "Photo of a lighthouse. Overexposure.",
+        "img_path": "./data/underexposure/lighthouse.png"
+    },
+    {
+        "encode_text": "Image of a cat sitting on a table.",
+        "decode_text": "Image of a cat sitting on a table wearing a floral shirt.",
+        "img_path": "./data/prompt2prompt/cat.png"
+    },
+    {
+        "encode_text": "Image of a cat sitting on a table.",
+        "decode_text": "Image of a cat sitting on a table wearing a colorful shirt.",
+        "img_path": "./data/prompt2prompt/cat.png"
+    },
+    {
+        "encode_text": "A close view of a red colored car.",
+        "decode_text": "A close view of a red colored car at night.",
+        "img_path": "./data/dalle2/A red colored car.png"
+    },
+    {
+        "encode_text": "A close view of a red colored car.",
+        "decode_text": "A close view of a broken red colored car.",
+        "img_path": "./data/dalle2/A red colored car.png"
+    },
+    {
+        "encode_text": "A close view of a red colored car.",
+        "decode_text": "A close view of a red colored car with a green wheel.",
+        "img_path": "./data/dalle2/A red colored car.png"
+    },
+    {
+        "encode_text": "A black colored car.",
+        "decode_text": "A blue colored car.",
+        "img_path": "./data/dalle2/A black colored car.png"
+    },
+    {
+        "encode_text": "A black colored car.",
+        "decode_text": "A black colored dirty car.",
+        "img_path": "./data/dalle2/A black colored car.png"
+    },
+    {
+        "encode_text": "A black colored car.",
+        "decode_text": "A black colored car with people inside.",
+        "img_path": "./data/dalle2/A black colored car.png"
+    },
+    {
+        "encode_text": "A black colored car.",
+        "decode_text": "A black colored car in a rainy day.",
+        "img_path": "./data/dalle2/A black colored car.png"
+    },
+    {
+        "encode_text": "A black colored dog.",
+        "decode_text": "A brown colored dog.",
+        "img_path": "./data/dalle2/A black colored dog.png"
+    },
+    {
+        "encode_text": "A black colored dog.",
+        "decode_text": "A blue colored dog.",
+        "img_path": "./data/dalle2/A black colored dog.png"
+    },
+    {
+        "encode_text": "A black colored dog.",
+        "decode_text": "A black colored dog in a desert.",
+        "img_path": "./data/dalle2/A black colored dog.png"
+    },
+    {
+        "encode_text": "A black colored dog.",
+        "decode_text": "A white colored dog.",
+        "img_path": "./data/dalle2/A black colored dog.png"
+    },
+    {
+        "encode_text": "A green colored banana.",
+        "decode_text": "A yellow colored banana.",
+        "img_path": "./data/dalle2/A green colored banana.png"
+    },
+    {
+        "encode_text": "A green colored banana.",
+        "decode_text": "A purple colored banana.",
+        "img_path": "./data/dalle2/A green colored banana.png"
+    },
+    {
+        "encode_text": "A red car and a white sheep.",
+        "decode_text": "A red car and a tiger.",
+        "img_path": "./data/dalle2/A red car and a white sheep.png"
+    },
+    {
+        "encode_text": "A red car and a white sheep.",
+        "decode_text": "A red car and a wolf.",
+        "img_path": "./data/dalle2/A red car and a white sheep.png"
+    },
+    {
+        "encode_text": "A red car and a white sheep.",
+        "decode_text": "A black car and a wolf.",
+        "img_path": "./data/dalle2/A red car and a white sheep.png"
+    },
+    {
+        "encode_text": "A blue bird standing on a brown bear. Cartoon.",
+        "decode_text": "A red bird standing on a brown bear. Cartoon.",
+        "img_path": "./data/dalle2/A blue bird and a brown bear.png"
+    },
+    {
+        "encode_text": "A blue bird standing on a brown bear. Cartoon.",
+        "decode_text": "A red bird standing on a brown bear. Pixel art.",
+        "img_path": "./data/dalle2/A blue bird and a brown bear.png"
+    },
+    {
+        "encode_text": "A green apple and a black backpack on the floor.",
+        "decode_text": "A red apple and a black backpack on the floor.",
+        "img_path": "./data/dalle2/A green apple and a black backpack.png"
+    },
+    {
+        "encode_text": "A green apple and a black backpack on the floor.",
+        "decode_text": "Two green apples and a black backpack on the floor.",
+        "img_path": "./data/dalle2/A green apple and a black backpack.png"
+    },
+    {
+        "encode_text": "A green apple and a black backpack on the floor.",
+        "decode_text": "A tennis ball and a black backpack on the floor.",
+        "img_path": "./data/dalle2/A green apple and a black backpack.png"
+    },
+    {
+        "encode_text": "An astronaut riding a horse.",
+        "decode_text": "An astronaut riding a horse with the earth in the background.",
+        "img_path": "./data/dalle2/An astronaut riding a horse.png"
+    },
+    {
+        "encode_text": "An astronaut riding a horse.",
+        "decode_text": "An astronaut riding a horse with the moon in the background.",
+        "img_path": "./data/dalle2/An astronaut riding a horse.png"
+    },
+    {
+        "encode_text": "An astronaut riding a horse.",
+        "decode_text": "An astronaut riding an elephant.",
+        "img_path": "./data/dalle2/An astronaut riding a horse.png"
+    },
+    {
+        "encode_text": "An astronaut lounging in a tropical resort in space, vaporwave.",
+        "decode_text": "An astronaut lounging in a polar resort in space, vaporwave.",
+        "img_path": "./data/dalle2/An astronaut lounging in a tropical resort in space, vaporwave.png"
+    },
+    {
+        "encode_text": "An astronaut lounging in a tropical resort in space, vaporwave.",
+        "decode_text": "An astronaut lounging in a tropical resort in space, 3D render.",
+        "img_path": "./data/dalle2/An astronaut lounging in a tropical resort in space, vaporwave.png"
+    },
+    {
+        "encode_text": "An astronaut lounging in a tropical resort in space, vaporwave.",
+        "decode_text": "An astronaut lounging in a tropical resort in space, oil pastel drawing.",
+        "img_path": "./data/dalle2/An astronaut lounging in a tropical resort in space, vaporwave.png"
+    },
+    {
+        "encode_text": "An astronaut lounging in a tropical resort in space, vaporwave.",
+        "decode_text": "An astronaut lounging in a tropical resort in space, Magritte style.",
+        "img_path": "./data/dalle2/An astronaut lounging in a tropical resort in space, vaporwave.png"
+    },
+    {
+        "encode_text": "An astronaut lounging in a tropical resort in space, vaporwave.",
+        "decode_text": "An astronaut lounging in a tropical resort in space, pixel art.",
+        "img_path": "./data/dalle2/An astronaut lounging in a tropical resort in space, vaporwave.png"
+    },
+    {
+        "encode_text": "A scene of a valley.",
+        "decode_text": "A scene of a valley in a stormy day.",
+        "img_path": "./data/dalle2/A scene of a valley.png"
+    },
+    {
+        "encode_text": "A scene of a valley.",
+        "decode_text": "A scene of a valley in a rainy day.",
+        "img_path": "./data/dalle2/A scene of a valley.png"
+    },
+    {
+        "encode_text": "A scene of a valley.",
+        "decode_text": "A scene of a valley when cars driving by.",
+        "img_path": "./data/dalle2/A scene of a valley.png"
+    },
+    {
+        "encode_text": "3D render of a small pink balloon dog in a light pink room.",
+        "decode_text": "3D render of a small blue balloon dog in a light pink room.",
+        "img_path": "./data/dalle2/3D render of a small pink balloon dog in a light pink room.png"
+    },
+    {
+        "encode_text": "3D render of a small pink balloon dog in a light pink room.",
+        "decode_text": "3D render of a small pink balloon dog in a light blue room.",
+        "img_path": "./data/dalle2/3D render of a small pink balloon dog in a light pink room.png"
+    },
+    {
+        "encode_text": "An oil pastel drawing of an annoyed cat in a spaceship.",
+        "decode_text": "An oil pastel drawing of an annoyed dog in a spaceship.",
+        "img_path": "./data/dalle2/An oil pastel drawing of an annoyed cat in a spaceship.png"
+    },
+    {
+        "encode_text": "Abstract pencil and watercolor art of a lonely robot holding a balloon.",
+        "decode_text": "Abstract pencil and watercolor art of a lonely human holding a balloon.",
+        "img_path": "./data/dalle2/Abstract pencil and watercolor art of a lonely robot holding a balloon.png"
+    },
+    {
+        "encode_text": "Abstract pencil and watercolor art of a lonely robot holding a balloon.",
+        "decode_text": "Synthwave of a lonely robot holding a balloon.",
+        "img_path": "./data/dalle2/Abstract pencil and watercolor art of a lonely robot holding a balloon.png"
+    },
+    {
+        "encode_text": "Synthwave sports car.",
+        "decode_text": "Synthwave sports car with computers in the background.",
+        "img_path": "./data/dalle2/Synthwave sports car.png"
+    },
+    {
+        "encode_text": "Synthwave sports car.",
+        "decode_text": "Synthwave crashed sports car.",
+        "img_path": "./data/dalle2/Synthwave sports car.png"
+    },
+    {
+        "encode_text": "Synthwave sports car.",
+        "decode_text": "Synthwave convertible car.",
+        "img_path": "./data/dalle2/Synthwave sports car.png"
+    },
+    {
+        "encode_text": "Panda mad scientist mixing sparkling chemicals, digital art.",
+        "decode_text": "Dog mad scientist mixing sparkling chemicals, digital art.",
+        "img_path": "./data/dalle2/Panda mad scientist mixing sparkling chemicals, digital art.png"
+    },
+    {
+        "encode_text": "Panda mad scientist mixing sparkling chemicals, digital art.",
+        "decode_text": "Cat mad scientist mixing sparkling chemicals, digital art.",
+        "img_path": "./data/dalle2/Panda mad scientist mixing sparkling chemicals, digital art.png"
+    },
+    {
+        "encode_text": "Panda mad scientist mixing sparkling chemicals, digital art.",
+        "decode_text": "Panda mad scientist mixing green sparkling chemicals, digital art.",
+        "img_path": "./data/dalle2/Panda mad scientist mixing sparkling chemicals, digital art.png"
+    },
+    {
+        "encode_text": "3D render of a purple cute tropical fish in an aquarium on a dark blue background, digital art.",
+        "decode_text": "3D render of an orange cute tropical fish in an aquarium on a dark blue background, digital art.",
+        "img_path": "./data/dalle2/3D render of a cute tropical fish in an aquarium on a dark blue background, digital art.png"
+    },
+    {
+        "encode_text": "Profile of a boy holding an ice-cream at night. Anime.",
+        "decode_text": "Profile of a boy holding an ice-cream and wearing a Chistmas hat at night. Anime.",
+        "img_path": "./data/my_collection/icon.png"
+    },
+    {
+        "encode_text": "Profile of a boy holding an ice-cream at night. Anime.",
+        "decode_text": "Profile of a boy holding an ice-cream at night, nuclear explosion in the background. Anime.",
+        "img_path": "./data/my_collection/icon.png"
+    },
+    {
+        "encode_text": "Profile of a boy holding an ice-cream at night. Anime.",
+        "decode_text": "Profile of a boy holding an ice-cream at night, Mount Rainier in the background. Anime.",
+        "img_path": "./data/my_collection/icon.png"
+    },
+    {
+        "encode_text": "Profile of a boy holding an ice-cream at night. Anime.",
+        "decode_text": "Profile of a boy holding a book at night. Anime.",
+        "img_path": "./data/my_collection/icon.png"
+    },
+    {
+        "encode_text": "Profile of a boy holding an ice-cream at night. Anime.",
+        "decode_text": "Profile of a boy holding an ice-cream in a sunny day. Anime.",
+        "img_path": "./data/my_collection/icon.png"
+    },
+    {
+        "encode_text": "A photo of a school building at fall.",
+        "decode_text": "A photo of a school building at winter.",
+        "img_path": "./data/my_collection/school_autumn.png"
+    },
+    {
+        "encode_text": "A photo of a school building at fall.",
+        "decode_text": "A photo of a school building at spring.",
+        "img_path": "./data/my_collection/school_autumn.png"
+    },
+    {
+        "encode_text": "A photo of a school gate with flags.",
+        "decode_text": "A photo of a school gate with flags, a car parking nearby.",
+        "img_path": "./data/my_collection/school_gate.png"
+    },
+    {
+        "encode_text": "A photo of a school gate with flags.",
+        "decode_text": "A photo of a school gate with flags when snow comes down.",
+        "img_path": "./data/my_collection/school_gate.png"
+    },
+    {
+        "encode_text": "A photo of a school gate with flags.",
+        "decode_text": "A photo of a school gate with flags in a festival.",
+        "img_path": "./data/my_collection/school_gate.png"
+    },
+    {
+        "encode_text": "A boulevard with stone statues at sides, at autumn.",
+        "decode_text": "A boulevard with stone statues at sides, at winter.",
+        "img_path": "./data/my_collection/stone.png"
+    },
+    {
+        "encode_text": "A boulevard with stone statues at sides, at autumn.",
+        "decode_text": "A boulevard with elephants at sides, at autumn.",
+        "img_path": "./data/my_collection/stone.png"
+    },
+    {
+        "encode_text": "A boulevard with stone statues at sides, at autumn.",
+        "decode_text": "A boulevard with soldiers at sides, at autumn.",
+        "img_path": "./data/my_collection/stone.png"
+    },
+    {
+        "encode_text": "A boulevard with stone statues at sides, at autumn.",
+        "decode_text": "A crowded boulevard with stone statues at sides, at autumn.",
+        "img_path": "./data/my_collection/stone.png"
+    },
+    {
+        "encode_text": "A boulevard with stone statues at sides, at autumn.",
+        "decode_text": "A boulevard with journalists at sides, at autumn.",
+        "img_path": "./data/my_collection/stone.png"
+    },
+    {
+        "encode_text": "A boulevard with stone statues at sides, at autumn.",
+        "decode_text": "A boulevard with stone statues at sides, at summer.",
+        "img_path": "./data/my_collection/stone.png"
+    },
+    {
+        "encode_text": "A boulevard with stone statues at sides, at autumn.",
+        "decode_text": "A boulevard with stone statues at sides, at winter.",
+        "img_path": "./data/my_collection/stone.png"
+    },
+    {
+        "encode_text": "A photo of Sun Yat-sen Mausoleum.",
+        "decode_text": "A photo of Sun Yat-sen Mausoleum, crowded.",
+        "img_path": "./data/my_collection/Sun_Yat-sen_Mausoleum_1.png"
+    },
+    {
+        "encode_text": "A photo of Sun Yat-sen Mausoleum.",
+        "decode_text": "A photo of Sun Yat-sen Mausoleum when snow comes down.",
+        "img_path": "./data/my_collection/Sun_Yat-sen_Mausoleum_1.png"
+    },
+    {
+        "encode_text": "A photo of Sun Yat-sen Mausoleum.",
+        "decode_text": "A photo of Sun Yat-sen Mausoleum, crowded.",
+        "img_path": "./data/my_collection/Sun_Yat-sen_Mausoleum_2.png"
+    },
+    {
+        "encode_text": "A photo of Sun Yat-sen Mausoleum.",
+        "decode_text": "A photo of Sun Yat-sen Mausoleum at winter.",
+        "img_path": "./data/my_collection/Sun_Yat-sen_Mausoleum_2.png"
+    },
+    {
+        "encode_text": "An aerial view of autumn scene.",
+        "decode_text": "An aerial view of winter scene.",
+        "img_path": "./data/my_collection/Sun_Yat-sen_Mausoleum_3.png"
+    },
+    {
+        "encode_text": "An aerial view of autumn scene.",
+        "decode_text": "An aerial view of summer scene.",
+        "img_path": "./data/my_collection/Sun_Yat-sen_Mausoleum_3.png"
+    },
+    {
+        "encode_text": "An aerial view of autumn scene.",
+        "decode_text": "An aerial view of autumn rainy scene.",
+        "img_path": "./data/my_collection/Sun_Yat-sen_Mausoleum_3.png"
+    },
+    {
+        "encode_text": "A purple backpack.",
+        "decode_text": "A purple backpack in the Grand Canyon.",
+        "img_path": "./data/papers/bag.png"
+    },
+    {
+        "encode_text": "A purple backpack.",
+        "decode_text": "A wet purple backpack in water.",
+        "img_path": "./data/papers/bag.png"
+    },
+    {
+        "encode_text": "A purple backpack.",
+        "decode_text": "A purple backpack with the night sky.",
+        "img_path": "./data/papers/bag.png"
+    },
+    {
+        "encode_text": "A photo of a house made of brick.",
+        "decode_text": "A photo of a house made of brick in a cloudy day.",
+        "img_path": "./data/papers/house.png"
+    },
+    {
+        "encode_text": "Colorful chocolate beans.",
+        "decode_text": "Purple colored chocolate beans.",
+        "img_path": "./data/papers/chocolate.png"
+    },
+    {
+        "encode_text": "Colorful chocolate beans.",
+        "decode_text": "Blue and yellow chocolate beans.",
+        "img_path": "./data/papers/chocolate.png"
+    },
+    {
+        "encode_text": "Green and red peppers.",
+        "decode_text": "Green peppers.",
+        "img_path": "./data/papers/peppers.png"
+    },
+    {
+        "encode_text": "Green and red peppers.",
+        "decode_text": "Red peppers.",
+        "img_path": "./data/papers/peppers.png"
+    },
+    {
+        "encode_text": "A yellow butterfly with pink flowers.",
+        "decode_text": "A yellow butterfly with blue flowers.",
+        "img_path": "./data/papers/butterfly.png"
+    },
+    {
+        "encode_text": "A yellow butterfly with pink flowers.",
+        "decode_text": "A pink butterfly with pink flowers.",
+        "img_path": "./data/papers/butterfly.png"
+    },
+    {
+        "encode_text": "Red-and-white flowers with green leaves.",
+        "decode_text": "Blue-and-white flowers with green leaves.",
+        "img_path": "./data/papers/flowers.png"
+    },
+    {
+        "encode_text": "Red-and-white flowers with green leaves.",
+        "decode_text": "Orange-and-yellow flowers with green leaves.",
+        "img_path": "./data/papers/flowers.png"
+    },
+    {
+        "encode_text": "A hotel room with gray curtain and coverlet.",
+        "decode_text": "A hotel room with yellow curtain and coverlet.",
+        "img_path": "./data/papers/gray.png"
+    },
+    {
+        "encode_text": "A hotel room with gray curtain and coverlet.",
+        "decode_text": "A hotel room with white curtain and coverlet.",
+        "img_path": "./data/papers/gray.png"
+    },
+    {
+        "encode_text": "A hotel room with light green wallpaper.",
+        "decode_text": "A hotel room with light blue wallpaper.",
+        "img_path": "./data/papers/green.png"
+    },
+    {
+        "encode_text": "A hotel room with light green wallpaper.",
+        "decode_text": "A hotel room with light blue wallpaper. Anime.",
+        "img_path": "./data/papers/green.png"
+    },
+    {
+        "encode_text": "A hotel room with light green wallpaper.",
+        "decode_text": "A hotel room with light yellow wallpaper.",
+        "img_path": "./data/papers/green.png"
+    },
+    {
+        "encode_text": "A hotel room with red flowers on the bed.",
+        "decode_text": "A hotel room with green apples on the bed.",
+        "img_path": "./data/papers/flower_hotel.png"
+    },
+    {
+        "encode_text": "A hotel room with red flowers on the bed.",
+        "decode_text": "A hotel room with a cat sitting on the bed.",
+        "img_path": "./data/papers/flower_hotel.png"
+    },
+    {
+        "encode_text": "A hotel room with red flowers on the bed.",
+        "decode_text": "A hotel room with red flowers on the bed, vaporwave.",
+        "img_path": "./data/papers/flower_hotel.png"
+    },
+    {
+        "encode_text": "A photo of a laughing woman.",
+        "decode_text": "A photo of a laughing man.",
+        "img_path": "./data/images1024x1024/00001.png"
+    },
+    {
+        "encode_text": "A photo of a laughing woman.",
+        "decode_text": "A painting of a laughing woman in Magritte style.",
+        "img_path": "./data/images1024x1024/00001.png"
+    },
+    {
+        "encode_text": "A photo of a young man with green bangs.",
+        "decode_text": "A photo of a young man with purple bangs.",
+        "img_path": "./data/images1024x1024/00015.png"
+    },
+    {
+        "encode_text": "A photo of a young man with green bangs.",
+        "decode_text": "A photo of an old man with purple bangs.",
+        "img_path": "./data/images1024x1024/00015.png"
+    },
+    {
+        "encode_text": "A photo of a young man with green bangs.",
+        "decode_text": "A photo of a young woman with purple bangs.",
+        "img_path": "./data/images1024x1024/00015.png"
+    },
+    {
+        "encode_text": "A young man with green bangs.",
+        "decode_text": "A young woman with green bangs, pixel art.",
+        "img_path": "./data/images1024x1024/00015.png"
+    },
+    {
+        "encode_text": "A photo of a smiling middle-aged man.",
+        "decode_text": "A photo of a crying middle-aged man.",
+        "img_path": "./data/images1024x1024/00011.png"
+    },
+    {
+        "encode_text": "A smiling middle-aged man.",
+        "decode_text": "A smiling middle-aged man in the style of Starry Night.",
+        "img_path": "./data/images1024x1024/00011.png"
+    }
+]
