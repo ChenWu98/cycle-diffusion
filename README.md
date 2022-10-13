@@ -16,6 +16,7 @@ _Preprint, Oct 2022_
 1. Add reference to key hyperparameters, so one can tradeoff performance for efficiency. Currently, it takes a long time for each experiment. For instance, for all methods including the baselines, we enumerated many hyperparameter combinations and reranked them automatically; for SDEdit and CycleDiffusion, we had 15 random trials for each hyperparameter combination. See Appendix C and Appendix D for details. 
 2. Add GPU requirements. 
 3. I am working on transferring the implementation to the diffuser library. 
+4. Add guidelines for customized use.
 
 ## Notes
 1. **Section 4.3** of this paper is open-sourced at [Unified Generative Zoo](https://github.com/ChenWu98/unified-generative-zoo).
