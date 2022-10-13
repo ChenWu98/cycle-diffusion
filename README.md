@@ -57,6 +57,7 @@ Here are some comparisons with baselines.
   - [Contents](#contents)
   - [Dependencies](#dependencies)
   - [Evaluation data](#evaluation-data)
+  - [Pre-trained diffusion models](#pre-trained-diffusion-models)
   - [Citation](#citation)
   - [Potential Societal Impact](#potential-societal-impact)
   - [License](#license)
@@ -94,6 +95,43 @@ git clone git@github.com:clovaai/stargan-v2.git
 cd stargan-v2/
 bash download.sh afhq-v2-dataset
 ```
+
+## Pre-trained diffusion models
+
+1. Stable Diffusion
+```shell
+cd ckpts/
+mkdir stable_diffusion
+cd stable_diffusion/
+# Download pre-trained checkpoints for Stable Diffusion here. 
+# Due to licence issues, we cannot share the pre-trained checkpoints directly.
+```
+2. Latent Diffusion Model
+```shell
+cd ckpts/
+cd ckpts/
+wget https://www.dropbox.com/s/9lpdgs83l7tjk6c/ldm_models.zip
+unzip ldm_models.zip
+cd ldm_models/
+mkdir text2img-large
+cd text2img-large/
+wget https://ommer-lab.com/files/latent-diffusion/nitro/txt2img-f8-large/model.ckpt
+wget https://www.dropbox.com/s/7pdttimz78ll0km/txt2img-1p4B-eval.yaml
+```
+3. DDPM (AFHQ-Dog and FFHQ are from ILVR; CelebAHQ is from SDEdit; AFHQ-Cat and -Wild are trained by ourselves)
+```shell
+cd ckpts/
+mkdir ddpm
+cd ddpm/
+wget https://image-editing-test-12345.s3-us-west-2.amazonaws.com/checkpoints/celeba_hq.ckpt
+wget https://www.dropbox.com/s/g4h8sv07i3hj83d/ffhq_10m.pt
+wget https://www.dropbox.com/s/u74w8vaw1f8lc4k/afhq_dog_4m.pt
+wget https://www.dropbox.com/s/8i5aznjwdl3b5iq/cat_ema_0.9999_050000.pt
+wget https://www.dropbox.com/s/tplximipy8zxaub/wild_ema_0.9999_050000.pt
+wget https://www.dropbox.com/s/vqm6bxj0zslrjxv/configs.zip
+unzip configs.zip
+```
+
 
 ## Citation
 If you find this repository helpful, please cite as
