@@ -47,11 +47,34 @@ Here are some comparisons with baselines.
   - [Notes](#notes)
   - [Overview](#overview)
   - [Contents](#contents)
+  - [Dependencies](#dependencies)
   - [Citation](#citation)
   - [Potential Societal Impact](#potential-societal-impact)
   - [License](#license)
   - [Contact](#contact)
 
+
+## Dependencies
+
+1. Create environment by running
+```shell
+conda env create -f environment.yml
+conda activate generative_prompt
+pip install git+https://github.com/openai/CLIP.git
+```
+2. Install `torch` and `torchvision` based on your CUDA version. 
+3. Install [taming-transformers](https://github.com/CompVis/taming-transformers) by running
+```shell
+cd ../
+git clone git@github.com:CompVis/taming-transformers.git
+cd taming-transformers/
+pip install -e .
+cd ../
+```
+4. Set up [wandb](https://wandb.ai/) for logging (registration is required). You should modify the ```setup_wandb``` function in ```main.py``` to accomodate your wandb credentials. You may want to run something like
+```shell
+wandb login
+```
 
 
 ## Citation
