@@ -44,9 +44,9 @@ def setup_wandb(training_args):
         # if "MLFLOW_EXPERIMENT_ID" in os.environ:
         #     init_args["group"] = os.environ["MLFLOW_EXPERIMENT_ID"]
         wandb.init(
-            project=os.getenv("WANDB_PROJECT", "gan"),
+            project=os.getenv("WANDB_PROJECT", "your project name"),
             name=training_args.run_name,
-            entity=os.getenv("WANDB_ENTITY", 'chenwu'),
+            entity=os.getenv("WANDB_ENTITY", 'your entity'),
         )
         wandb.config.update(training_args, allow_val_change=True)
 
