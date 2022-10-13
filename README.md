@@ -42,6 +42,18 @@ Here are some comparisons with baselines.
     <img src="docs/text_baseline.png" align="middle" width=470>
 </div>
 
+## Contents
+- [CycleDiffusion: Text-to-Image Diffusion Models Are Image-to-Image Editors via Inferrring "Random Seed"](#cyclediffusion-text-to-image-diffusion-models-are-image-to-image-editors-via-inferrring-random-seed)
+  - [Notes](#notes)
+  - [Overview](#overview)
+  - [Contents](#contents)
+  - [Citation](#citation)
+  - [Potential Societal Impact](#potential-societal-impact)
+  - [License](#license)
+  - [Contact](#contact)
+
+
+
 ## Citation
 If you find this repository helpful, please cite as
 ```
