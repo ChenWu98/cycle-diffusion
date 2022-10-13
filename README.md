@@ -41,3 +41,14 @@ Here are some comparisons with baselines.
 <div align=center>
     <img src="docs/text_baseline.png" align="middle" width=470>
 </div>
+
+
+## License
+We use the X11 License. This license is identical to the MIT License, but with an extra sentence that prohibits using the copyright holders' names (Carnegie Mellon University in our case) for advertising or promotional purposes without written permission.
+
+## Contact
+[Issues](https://github.com/ChenWu98/cycle-diffusion/issues) are welcome if you have any question about the code. 
+If you would like to discuss the method, please contact [Chen Henry Wu](https://github.com/ChenWu98).
+
+<a href="https://github.com/ChenWu98"><img src="https://avatars.githubusercontent.com/u/28187501?v=4"  width="50" /></a>
+
