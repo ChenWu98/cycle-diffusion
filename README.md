@@ -42,6 +42,20 @@ Here are some comparisons with baselines.
     <img src="docs/text_baseline.png" align="middle" width=470>
 </div>
 
+## Citation
+If you find this repository helpful, please cite as
+```
+@inproceedings{unifydiffusion2022,
+  title={Unifying Diffusion Models' Latent Space, with Applications to {CycleDiffusion} and Guidance},
+  author={Chen Henry Wu and Fernando De la Torre},
+  booktitle={ArXiv},
+  year={2022},
+}
+```
+
+## Potential Societal Impact
+Pre-trained on large-scale text-image pair, text-to-image diffusion models may learn unintended biases, which can be reflected or even amplified by CycleDiffusion. We encourage researchers and practitioners to consider this risk when building and deploying systems upon our work. 
+
 
 ## License
 We use the X11 License. This license is identical to the MIT License, but with an extra sentence that prohibits using the copyright holders' names (Carnegie Mellon University in our case) for advertising or promotional purposes without written permission.
