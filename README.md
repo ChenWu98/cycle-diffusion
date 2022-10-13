@@ -9,6 +9,12 @@ _Preprint, Oct 2022_
 
 [**[Paper link]**](https://arxiv.org/abs/2210.05559)
 
+## Updates
+**[Oct 13 2022]** Code released. 
+
+## TODOs
+1. Add reference to key hyperparameters, so one can tradeoff performance for efficiency. Currently, it takes a long time for each experiment. For instance, for all methods including the baselines, we enumerated many hyperparameter combinations and reranked them automatically; for SDEdit and CycleDiffusion, we had 15 random trials for each hyperparameter combination. See Appendix C and Appendix D for details. 
+
 ## Notes
 1. **Section 4.3** of this paper is open-sourced at [Unified Generative Zoo](https://github.com/ChenWu98/unified-generative-zoo).
 2. The code is based on [Generative Visual Prompt](https://github.com/ChenWu98/Generative-Visual-Prompt).
@@ -44,10 +50,13 @@ Here are some comparisons with baselines.
 
 ## Contents
 - [CycleDiffusion: Text-to-Image Diffusion Models Are Image-to-Image Editors via Inferrring "Random Seed"](#cyclediffusion-text-to-image-diffusion-models-are-image-to-image-editors-via-inferrring-random-seed)
+  - [Updates](#updates)
+  - [TODOs](#todos)
   - [Notes](#notes)
   - [Overview](#overview)
   - [Contents](#contents)
   - [Dependencies](#dependencies)
+  - [Evaluation data](#evaluation-data)
   - [Citation](#citation)
   - [Potential Societal Impact](#potential-societal-impact)
   - [License](#license)
@@ -76,6 +85,15 @@ cd ../
 wandb login
 ```
 
+## Evaluation data
+
+1. Most data for zero-shot image-to-image translation are already included in [data/](data/). Some images are from the AFHQ validation set, detailed below. 
+2. Prepare the AFHQ validation set for unpaired image-to-image translation (also for some images used by zero-shot image-to-image translation) by running
+```shell
+git clone git@github.com:clovaai/stargan-v2.git
+cd stargan-v2/
+bash download.sh afhq-v2-dataset
+```
 
 ## Citation
 If you find this repository helpful, please cite as
