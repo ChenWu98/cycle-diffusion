@@ -22,6 +22,7 @@ _Preprint, Oct 2022_
 1. **Section 4.3** of this paper is open-sourced at [Unified Generative Zoo](https://github.com/ChenWu98/unified-generative-zoo).
 2. The code is based on [Generative Visual Prompt](https://github.com/ChenWu98/Generative-Visual-Prompt).
 3. Feel free to email me if you think I should cite your work! 
+4. Path naming follows Linux rather than Windows. Please manually change them if you encounter path errors. 
 
 ## Overview
 We think the randomness in diffusion models is like magic! Accumulated evidence has shown that fixing the "random seed" helps diffusion models generate images from two image distributions with minimal differences. Our paper is exactly about **how to formalize this "random seed"** and **how to infer it from a given real image**. 
