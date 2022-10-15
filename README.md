@@ -1,4 +1,4 @@
-# CycleDiffusion: Text-to-Image Diffusion Models Are Image-to-Image Editors via Inferrring "Random Seed"
+# CycleDiffusion: Text-to-Image Diffusion Models Are Image-to-Image Editors via Inferring "Random Seed"
 
 Official PyTorch implementation of (**Sections 4.1** and **4.2** of) our paper <br>
 **Unifying Diffusion Models' Latent Space, with Applications to CycleDiffusion and Guidance** <br>
