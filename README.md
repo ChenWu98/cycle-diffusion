@@ -12,7 +12,7 @@ _Preprint, Oct 2022_
 ## Updates
 **[Oct 13 2022]** Code released.
 
-**[Oct 16 2022]** Updated customized use for zero-shot image editing.
+**[Oct 16 2022]** Updated [customized use](#customized-use-for-zero-shot-image-to-image-translation) for zero-shot image editing.
 
 ## TODOs
 1. Add reference to key hyperparameters, so one can tradeoff performance for efficiency. Currently, it takes a long time for each experiment. For instance, for all methods including the baselines, we enumerated many hyperparameter combinations and reranked them automatically; for SDEdit and CycleDiffusion, we had 15 random trials for each hyperparameter combination. See Appendix C and Appendix D for details. 
@@ -54,7 +54,7 @@ Here are some comparisons with baselines.
 </div>
 
 ## Contents
-- [CycleDiffusion: Text-to-Image Diffusion Models Are Image-to-Image Editors via Inferrring "Random Seed"](#cyclediffusion-text-to-image-diffusion-models-are-image-to-image-editors-via-inferrring-random-seed)
+- [CycleDiffusion: Text-to-Image Diffusion Models Are Image-to-Image Editors via Inferring "Random Seed"](#cyclediffusion-text-to-image-diffusion-models-are-image-to-image-editors-via-inferring-random-seed)
   - [Updates](#updates)
   - [TODOs](#todos)
   - [Notes](#notes)
@@ -65,6 +65,7 @@ Here are some comparisons with baselines.
   - [Pre-trained diffusion models](#pre-trained-diffusion-models)
   - [Usage](#usage)
     - [Zero-shot image-to-image translation with text-to-image diffusion models](#zero-shot-image-to-image-translation-with-text-to-image-diffusion-models)
+    - [Customized use for zero-shot image-to-image translation](#customized-use-for-zero-shot-image-to-image-translation)
     - [Unpaired image-to-image translation with diffusion models trained on two domains](#unpaired-image-to-image-translation-with-diffusion-models-trained-on-two-domains)
   - [Citation](#citation)
   - [Potential Societal Impact](#potential-societal-impact)
