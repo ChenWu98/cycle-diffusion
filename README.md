@@ -229,8 +229,13 @@ nohup python -m torch.distributed.launch --nproc_per_node 1 --master_port 1412 m
 ```
 
 ### Customized use for zero-shot image-to-image translation
-1. Add your own image path and source-target text pairs at the end of [this file](./data/translate-text.json)
-2. To customize the hyperparameters, 
+1. Add your own image path and source-target text pairs at the end of [this json file](./data/translate-text.json). You can add as many as you want.
+2. Suggested hyperparameter tuning in [this config file](./config/experiments/translate_text2img256_stable_diffusion_stochastic_custom.cfg)
+  - decoder_unconditional_guidance_scales: larger value means more weight on the target text
+  - skip_steps: larger value means more similar to the original image
+  - random seed: different random seed will generate different results
+3. Note that each combination of `decoder_unconditional_guidance_scales` $\times$ `skip_steps` will be enumerated, and the best one is returned. 
+4. Run the following command to generate the image. Outputs will be saved in the `output` folder.
 ```shell
 export CUDA_VISIBLE_DEVICES=0
 export RUN_NAME=translate_text2img256_stable_diffusion_stochastic_custom
