@@ -11,6 +11,7 @@ _Preprint, Oct 2022_
 
 ## Updates
 **[Oct 13 2022]** Code released.
+
 **[Oct 16 2022]** Updated customized use for zero-shot image editing.
 
 ## TODOs
