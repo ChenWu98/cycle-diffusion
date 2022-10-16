@@ -10,13 +10,13 @@ _Preprint, Oct 2022_
 [**[Paper link]**](https://arxiv.org/abs/2210.05559)
 
 ## Updates
-**[Oct 13 2022]** Code released. 
+**[Oct 13 2022]** Code released.
+**[Oct 16 2022]** Updated customized use for zero-shot image editing.
 
 ## TODOs
 1. Add reference to key hyperparameters, so one can tradeoff performance for efficiency. Currently, it takes a long time for each experiment. For instance, for all methods including the baselines, we enumerated many hyperparameter combinations and reranked them automatically; for SDEdit and CycleDiffusion, we had 15 random trials for each hyperparameter combination. See Appendix C and Appendix D for details. 
 2. Add GPU requirements. 
 3. I am working on transferring the implementation to the diffuser library. 
-4. Add guidelines for customized use.
 
 ## Notes
 1. **Section 4.3** of this paper is open-sourced at [Unified Generative Zoo](https://github.com/ChenWu98/unified-generative-zoo).
@@ -225,6 +225,16 @@ export CUDA_VISIBLE_DEVICES=7
 export RUN_NAME=translate_text2img256_latentdiff_stochastic_8
 export SEED=42
 nohup python -m torch.distributed.launch --nproc_per_node 1 --master_port 1412 main.py --seed $SEED --cfg experiments/$RUN_NAME.cfg --run_name $RUN_NAME$SEED --logging_strategy steps --logging_first_step true --logging_steps 4 --evaluation_strategy steps --eval_steps 50 --metric_for_best_model CLIPEnergy --greater_is_better false --save_strategy steps --save_steps 50 --save_total_limit 1 --load_best_model_at_end --gradient_accumulation_steps 4 --num_train_epochs 0 --adafactor false --learning_rate 1e-3 --do_eval --output_dir output/$RUN_NAME$SEED --overwrite_output_dir --per_device_train_batch_size 1 --per_device_eval_batch_size 16 --eval_accumulation_steps 4 --ddp_find_unused_parameters true --verbose true > $RUN_NAME$SEED.log 2>&1 &
+```
+
+### Customized use for zero-shot image-to-image translation
+1. Add your own image path and source-target text pairs at the end of [this file](./data/translate-text.json)
+2. To customize the hyperparameters, 
+```shell
+export CUDA_VISIBLE_DEVICES=0
+export RUN_NAME=translate_text2img256_stable_diffusion_stochastic_custom
+export SEED=42
+nohup python -m torch.distributed.launch --nproc_per_node 1 --master_port 1426 main.py --seed $SEED --cfg experiments/$RUN_NAME.cfg --run_name $RUN_NAME$SEED --logging_strategy steps --logging_first_step true --logging_steps 4 --evaluation_strategy steps --eval_steps 50 --metric_for_best_model CLIPEnergy --greater_is_better false --save_strategy steps --save_steps 50 --save_total_limit 1 --load_best_model_at_end --gradient_accumulation_steps 4 --num_train_epochs 0 --adafactor false --learning_rate 1e-3 --do_eval --output_dir output/$RUN_NAME$SEED --overwrite_output_dir --per_device_train_batch_size 1 --per_device_eval_batch_size 4 --eval_accumulation_steps 4 --ddp_find_unused_parameters true --verbose true > $RUN_NAME$SEED.log 2>&1 &
 ```
 
 ### Unpaired image-to-image translation with diffusion models trained on two domains
