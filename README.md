@@ -112,7 +112,8 @@ bash download.sh afhq-v2-dataset
 cd ckpts/
 mkdir stable_diffusion
 cd stable_diffusion/
-# Download pre-trained checkpoints for Stable Diffusion here. 
+# Download pre-trained checkpoints for Stable Diffusion here.
+# You should download this version: https://huggingface.co/CompVis/stable-diffusion-v-1-4-original
 # Due to licence issues, we cannot share the pre-trained checkpoints directly.
 ```
 2. Latent Diffusion Model
