@@ -320,13 +320,12 @@ def sample_xt(x0, t, b):
 
 class DDPMDDIMWrapper(torch.nn.Module):
 
-    def __init__(self, source_model_type, sample_type, custom_steps, white_box_steps, source_model_path=None,
+    def __init__(self, source_model_type, sample_type, custom_steps, source_model_path=None,
                  refine_steps=0, refine_iterations=1, eta=None, t_0=None, enforce_class_input=None):
         super(DDPMDDIMWrapper, self).__init__()
 
         self.enforce_class_input = enforce_class_input  # TODO
         self.custom_steps = custom_steps
-        self.white_box_steps = white_box_steps
         self.refine_steps = refine_steps
         self.refine_iterations = refine_iterations
         self.sample_type = sample_type
@@ -384,7 +383,7 @@ class DDPMDDIMWrapper(torch.nn.Module):
 
         self.resolution = config.data.image_size
         self.channels = config.data.channels
-        self.latent_dim = self.resolution ** 2 * self.channels * self.white_box_steps
+        self.latent_dim = self.resolution ** 2 * self.channels * self.custom_steps
         # Freeze.
         requires_grad(self.generator, False)
 
@@ -403,7 +402,7 @@ class DDPMDDIMWrapper(torch.nn.Module):
         seq_inv_next = [-1] + list(seq_inv[:-1])  # -1, 0, 1, ..., t_0-1
 
         bsz = z.shape[0]
-        eps_list = z.view(bsz, self.white_box_steps, self.channels, self.resolution, self.resolution)
+        eps_list = z.view(bsz, self.custom_steps, self.channels, self.resolution, self.resolution)
         x_T = eps_list[:, 0]
         eps_list = eps_list[:, 1:]
 
@@ -416,21 +415,13 @@ class DDPMDDIMWrapper(torch.nn.Module):
                 t = (torch.ones(bsz) * i).to(self.device)
                 t_next = (torch.ones(bsz) * j).to(self.device)
 
-                if it < self.white_box_steps - 1:
-                    eps = eps_list[:, it]
-                    x = denoising_step_with_eps(x, eps=eps, t=t, t_next=t_next, models=self.generator,
-                                                logvars=self.logvar,
-                                                sampling_type=self.sample_type,
-                                                b=self.betas,
-                                                eta=self.eta,
-                                                learn_sigma=self.learn_sigma)
-                else:
-                    x = denoising_step(x, t=t, t_next=t_next, models=self.generator,
-                                       logvars=self.logvar,
-                                       sampling_type=self.sample_type,
-                                       b=self.betas,
-                                       eta=self.eta,
-                                       learn_sigma=self.learn_sigma)
+                eps = eps_list[:, it]
+                x = denoising_step_with_eps(x, eps=eps, t=t, t_next=t_next, models=self.generator,
+                                            logvars=self.logvar,
+                                            sampling_type=self.sample_type,
+                                            b=self.betas,
+                                            eta=self.eta,
+                                            learn_sigma=self.learn_sigma)
 
             if self.refine_steps == 0:
                 img = x
@@ -493,33 +484,30 @@ class DDPMDDIMWrapper(torch.nn.Module):
                     t = (torch.ones(bsz) * i).to(self.device)
                     t_next = (torch.ones(bsz) * j).to(self.device)
 
-                    if it < self.white_box_steps - 1:
-                        xt_next = sample_xt_next(
-                            x0=x0,
-                            xt=xt,
-                            t=t,
-                            t_next=t_next,
-                            sampling_type=self.sample_type,
-                            b=self.betas,
-                            eta=self.eta,
-                        )  # TODO: based on x0 and current xt
-                        eps = compute_eps(
-                            xt=xt,
-                            xt_next=xt_next,
-                            t=t,
-                            t_next=t_next,
-                            models=self.generator,
-                            sampling_type=self.sample_type,
-                            b=self.betas,
-                            logvars=self.logvar,
-                            eta=self.eta,
-                            learn_sigma=self.learn_sigma,
-                        )  # TODO: based on generator, xt, and xt_next
-                        print(it, (eps ** 2).sum().item())
-                        xt = xt_next
-                        z_list.append(eps)
-                    else:
-                        break
+                    xt_next = sample_xt_next(
+                        x0=x0,
+                        xt=xt,
+                        t=t,
+                        t_next=t_next,
+                        sampling_type=self.sample_type,
+                        b=self.betas,
+                        eta=self.eta,
+                    )  # TODO: based on x0 and current xt
+                    eps = compute_eps(
+                        xt=xt,
+                        xt_next=xt_next,
+                        t=t,
+                        t_next=t_next,
+                        models=self.generator,
+                        sampling_type=self.sample_type,
+                        b=self.betas,
+                        logvars=self.logvar,
+                        eta=self.eta,
+                        learn_sigma=self.learn_sigma,
+                    )  # TODO: based on generator, xt, and xt_next
+                    print(it, (eps ** 2).sum().item())
+                    xt = xt_next
+                    z_list.append(eps)
                 print('((xt_next - x0) ** 2).sum().item()', ((xt_next - x0) ** 2).sum().item())  # TODO: remove.
 
             z = torch.stack(z_list, dim=1).view(bsz, -1)
@@ -537,34 +525,6 @@ class DDPMDDIMWrapper(torch.nn.Module):
         self.post_process(img)
 
         return img
-
-    def slerp(self, z1, z2, alpha):
-        assert z1.shape == z2.shape and z1.dim() == 2
-        if alpha == 0:
-            return z1
-        elif alpha == 1:
-            return z2
-        elif isinstance(alpha, float):
-            pass
-        elif isinstance(alpha, torch.Tensor):
-            assert alpha.dim() == 1
-            alpha = alpha.unsqueeze(1)
-        else:
-            raise ValueError("alpha must be a float or a 1D tensor")
-
-        bsz = z1.shape[0]
-        z1 = z1.view(bsz, self.white_box_steps, self.resolution ** 2 * self.channels)
-        z2 = z2.view(bsz, self.white_box_steps, self.resolution ** 2 * self.channels)
-        if isinstance(alpha, torch.Tensor):
-            alpha = alpha.unsqueeze(2)
-            assert z1.dim() == z2.dim() == alpha.dim() == 3
-        theta = torch.acos(
-            torch.sum(z1 * z2, dim=-1, keepdim=True) /
-            (torch.norm(z1, dim=-1, keepdim=True) * torch.norm(z2, dim=-1, keepdim=True))
-        )
-        z = torch.sin((1 - alpha) * theta) / torch.sin(theta) * z1 + torch.sin(alpha * theta) / torch.sin(theta) * z2
-        z = z.view(bsz, self.resolution ** 2 * self.channels * self.white_box_steps)
-        return z
 
     @property
     def device(self):
