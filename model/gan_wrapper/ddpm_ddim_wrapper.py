@@ -533,7 +533,7 @@ class DDPMDDIMWrapper(torch.nn.Module):
         img = self.generate(z, class_label)
 
         # Post process.
-        self.post_process(img)
+        img = self.post_process(img)
 
         return img
 
