@@ -415,13 +415,21 @@ class DDPMDDIMWrapper(torch.nn.Module):
                 t = (torch.ones(bsz) * i).to(self.device)
                 t_next = (torch.ones(bsz) * j).to(self.device)
 
-                eps = eps_list[:, it]
-                x = denoising_step_with_eps(x, eps=eps, t=t, t_next=t_next, models=self.generator,
-                                            logvars=self.logvar,
-                                            sampling_type=self.sample_type,
-                                            b=self.betas,
-                                            eta=self.eta,
-                                            learn_sigma=self.learn_sigma)
+                if it < self.custom_steps - 1:
+                    eps = eps_list[:, it]
+                    x = denoising_step_with_eps(x, eps=eps, t=t, t_next=t_next, models=self.generator,
+                                                logvars=self.logvar,
+                                                sampling_type=self.sample_type,
+                                                b=self.betas,
+                                                eta=self.eta,
+                                                learn_sigma=self.learn_sigma)
+                else:
+                    x = denoising_step(x, t=t, t_next=t_next, models=self.generator,
+                                       logvars=self.logvar,
+                                       sampling_type=self.sample_type,
+                                       b=self.betas,
+                                       eta=self.eta,
+                                       learn_sigma=self.learn_sigma)
 
             if self.refine_steps == 0:
                 img = x
@@ -484,30 +492,33 @@ class DDPMDDIMWrapper(torch.nn.Module):
                     t = (torch.ones(bsz) * i).to(self.device)
                     t_next = (torch.ones(bsz) * j).to(self.device)
 
-                    xt_next = sample_xt_next(
-                        x0=x0,
-                        xt=xt,
-                        t=t,
-                        t_next=t_next,
-                        sampling_type=self.sample_type,
-                        b=self.betas,
-                        eta=self.eta,
-                    )  # TODO: based on x0 and current xt
-                    eps = compute_eps(
-                        xt=xt,
-                        xt_next=xt_next,
-                        t=t,
-                        t_next=t_next,
-                        models=self.generator,
-                        sampling_type=self.sample_type,
-                        b=self.betas,
-                        logvars=self.logvar,
-                        eta=self.eta,
-                        learn_sigma=self.learn_sigma,
-                    )  # TODO: based on generator, xt, and xt_next
-                    print(it, (eps ** 2).sum().item())
-                    xt = xt_next
-                    z_list.append(eps)
+                    if it < self.custom_steps - 1:
+                        xt_next = sample_xt_next(
+                            x0=x0,
+                            xt=xt,
+                            t=t,
+                            t_next=t_next,
+                            sampling_type=self.sample_type,
+                            b=self.betas,
+                            eta=self.eta,
+                        )  # TODO: based on x0 and current xt
+                        eps = compute_eps(
+                            xt=xt,
+                            xt_next=xt_next,
+                            t=t,
+                            t_next=t_next,
+                            models=self.generator,
+                            sampling_type=self.sample_type,
+                            b=self.betas,
+                            logvars=self.logvar,
+                            eta=self.eta,
+                            learn_sigma=self.learn_sigma,
+                        )  # TODO: based on generator, xt, and xt_next
+                        print(it, (eps ** 2).sum().item())
+                        xt = xt_next
+                        z_list.append(eps)
+                    else:
+                        break
                 print('((xt_next - x0) ** 2).sum().item()', ((xt_next - x0) ** 2).sum().item())  # TODO: remove.
 
             z = torch.stack(z_list, dim=1).view(bsz, -1)
