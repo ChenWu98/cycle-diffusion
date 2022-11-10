@@ -7,14 +7,14 @@ Carnegie Mellon University <br>
 _Preprint, Oct 2022_
 
 
-[**[Paper link]**](https://arxiv.org/abs/2210.05559)
+[**[Paper link]**](https://arxiv.org/abs/2210.05559) | [**[Diffusers 🧨 implementation]**](https://huggingface.co/docs/diffusers/main/en/api/pipelines/cycle_diffusion) | [**[HuggingFace 🤗 demo]**](https://huggingface.co/spaces/ChenWu98/CycleDiffusion)
 
 ## Updates
 **[Oct 13 2022]** Code released.
 
 **[Oct 16 2022]** Updated [customized use](#customized-use-for-zero-shot-image-to-image-translation) for zero-shot image editing.
 
-**[Nov 9 2022]** CycleDiffusion is now available as a pipeline on HuggingFace 🤗 [Diffusers](https://github.com/huggingface/diffusers) 🧨. Please check the [pipeline doc](https://huggingface.co/docs/diffusers/main/en/api/pipelines/cycle_diffusion). The implementation is compatible with [cross attention control](https://arxiv.org/abs/2208.01626) (CAC). 
+**[Nov 9 2022]** CycleDiffusion is now available as a pipeline on HuggingFace 🤗 [Diffusers](https://github.com/huggingface/diffusers) 🧨. Please check the [pipeline doc](https://huggingface.co/docs/diffusers/main/en/api/pipelines/cycle_diffusion). The CycleDiffusion pipeline supports [Cross Attention Control](https://arxiv.org/abs/2208.01626) (CAC). 
 
 **[Nov 10 2022]** A demo built with HuggingFace 🤗 Spaces is available at [CycleDiffusion Space](https://huggingface.co/spaces/ChenWu98/CycleDiffusion). CAC is supported. 
 
