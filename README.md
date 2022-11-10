@@ -14,16 +14,15 @@ _Preprint, Oct 2022_
 
 **[Oct 16 2022]** Updated [customized use](#customized-use-for-zero-shot-image-to-image-translation) for zero-shot image editing.
 
-## TODOs
-1. Add reference to key hyperparameters, so one can tradeoff performance for efficiency. Currently, it takes a long time for each experiment. For instance, for all methods including the baselines, we enumerated many hyperparameter combinations and reranked them automatically; for SDEdit and CycleDiffusion, we had 15 random trials for each hyperparameter combination. See Appendix C and Appendix D for details. 
-2. Add GPU requirements. 
-3. I am working on transferring the implementation to the [diffusers](https://github.com/huggingface/diffusers) library and also supporting [cross attention control](https://github.com/google/prompt-to-prompt). 
+**[Nov 9 2022]** CycleDiffusion is now available as a pipeline on HuggingFace 🤗 [Diffusers](https://github.com/huggingface/diffusers) 🧨. Please check the [pipeline doc](https://huggingface.co/docs/diffusers/main/en/api/pipelines/cycle_diffusion). The implementation is compatible with [cross attention control](https://arxiv.org/abs/2208.01626) (CAC). 
+
+**[Nov 10 2022]** A demo built with HuggingFace 🤗 Spaces is available at [CycleDiffusion Space](https://huggingface.co/spaces/ChenWu98/CycleDiffusion). CAC is supported. 
+
 
 ## Notes
 1. **Section 4.3** of this paper is open-sourced at [Unified Generative Zoo](https://github.com/ChenWu98/unified-generative-zoo).
 2. The code is based on [Generative Visual Prompt](https://github.com/ChenWu98/Generative-Visual-Prompt).
 3. Feel free to email me if you think I should cite your work! 
-4. Path naming follows Linux rather than Windows. Please manually change them if you encounter path errors. 
 
 ## Overview
 We think the randomness in diffusion models is like magic! Accumulated evidence has shown that fixing the "random seed" helps diffusion models generate images from two image distributions with minimal differences. Our paper is exactly about **how to formalize this "random seed"** and **how to infer it from a given real image**. 
