@@ -16,7 +16,7 @@ _Preprint, Oct 2022_
 
 **[Nov 9 2022]** CycleDiffusion is now available as a pipeline on HuggingFace 🤗 [Diffusers](https://github.com/huggingface/diffusers) 🧨. Please check the [pipeline doc](https://huggingface.co/docs/diffusers/main/en/api/pipelines/cycle_diffusion). The CycleDiffusion pipeline supports [Cross Attention Control](https://arxiv.org/abs/2208.01626) (CAC). 
 
-**[Nov 10 2022]** A demo built with HuggingFace 🤗 Spaces is available at [CycleDiffusion Space](https://huggingface.co/spaces/ChenWu98/CycleDiffusion). CAC is supported. 
+**[Nov 10 2022]** A demo built with HuggingFace 🤗 Spaces is available at [Stable CycleDiffusion](https://huggingface.co/spaces/ChenWu98/Stable-CycleDiffusion). CAC is supported. 
 
 
 ## Notes
