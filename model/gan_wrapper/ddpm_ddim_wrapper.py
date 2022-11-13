@@ -316,7 +316,7 @@ def sample_xt(x0, t, b):
 
 class DDPMDDIMWrapper(torch.nn.Module):
 
-    def __init__(self, source_model_type, sample_type, custom_steps, source_model_path=None,
+    def __init__(self, source_model_type, sample_type, custom_steps, es_steps, source_model_path=None,
                  refine_steps=0, refine_iterations=1, eta=None, t_0=None, enforce_class_input=None):
         super(DDPMDDIMWrapper, self).__init__()
 
@@ -327,6 +327,7 @@ class DDPMDDIMWrapper(torch.nn.Module):
         self.sample_type = sample_type
         self.eta = eta
         self.t_0 = t_0 if t_0 is not None else 999  # TODO
+        self.es_steps = es_steps
 
         if self.sample_type == 'ddim':
             assert self.eta > 0
@@ -379,7 +380,7 @@ class DDPMDDIMWrapper(torch.nn.Module):
 
         self.resolution = config.data.image_size
         self.channels = config.data.channels
-        self.latent_dim = self.resolution ** 2 * self.channels * self.custom_steps
+        self.latent_dim = self.resolution ** 2 * self.channels * self.es_steps
         # Freeze.
         requires_grad(self.generator, False)
 
@@ -394,11 +395,11 @@ class DDPMDDIMWrapper(torch.nn.Module):
             assert len(seq_inv) == self.custom_steps
         else:
             seq_inv = np.linspace(0, 1, self.custom_steps) * self.t_0
-        seq_inv = [int(s) for s in list(seq_inv)]  # 0, 1, ..., t_0
-        seq_inv_next = [-1] + list(seq_inv[:-1])  # -1, 0, 1, ..., t_0-1
+        seq_inv = [int(s) for s in list(seq_inv)][:self.es_steps]  # 0, 1, ..., t_0
+        seq_inv_next = ([-1] + list(seq_inv[:-1]))[:self.es_steps]  # -1, 0, 1, ..., t_0-1
 
         bsz = z.shape[0]
-        eps_list = z.view(bsz, self.custom_steps, self.channels, self.resolution, self.resolution)
+        eps_list = z.view(bsz, self.es_steps, self.channels, self.resolution, self.resolution)
         x_T = eps_list[:, 0]
         eps_list = eps_list[:, 1:]
 
@@ -411,7 +412,7 @@ class DDPMDDIMWrapper(torch.nn.Module):
                 t = (torch.ones(bsz) * i).to(self.device)
                 t_next = (torch.ones(bsz) * j).to(self.device)
 
-                if it < self.custom_steps - 1:
+                if it < self.es_steps - 1:
                     eps = eps_list[:, it]
                     x = denoising_step_with_eps(x, eps=eps, t=t, t_next=t_next, models=self.generator,
                                                 logvars=self.logvar,
@@ -462,8 +463,8 @@ class DDPMDDIMWrapper(torch.nn.Module):
             assert len(seq_inv) == self.custom_steps
         else:
             seq_inv = np.linspace(0, 1, self.custom_steps) * self.t_0
-        seq_inv = [int(s) for s in list(seq_inv)]
-        seq_inv_next = [-1] + list(seq_inv[:-1])
+        seq_inv = [int(s) for s in list(seq_inv)][:self.es_steps]
+        seq_inv_next = ([-1] + list(seq_inv[:-1]))[:self.es_steps]
 
         # Normalize.
         image = (image - 0.5) * 2.0
@@ -479,7 +480,7 @@ class DDPMDDIMWrapper(torch.nn.Module):
                 assert class_label is not None
                 raise NotImplementedError()
             else:
-                T = (torch.ones(bsz) * self.t_0).to(self.device)
+                T = (torch.ones(bsz) * (self.es_steps - 1)).to(self.device)
                 xT = sample_xt(x0=x0, t=T, b=self.betas)
                 z_list = [xT, ]
 
@@ -488,7 +489,7 @@ class DDPMDDIMWrapper(torch.nn.Module):
                     t = (torch.ones(bsz) * i).to(self.device)
                     t_next = (torch.ones(bsz) * j).to(self.device)
 
-                    if it < self.custom_steps - 1:
+                    if it < self.es_steps - 1:
                         xt_next = sample_xt_next(
                             x0=x0,
                             xt=xt,
