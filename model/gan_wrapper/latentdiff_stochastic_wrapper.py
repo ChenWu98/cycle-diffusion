@@ -1,4 +1,3 @@
-# Created by Chen Henry Wu
 import os
 import sys
 sys.path.append(os.path.abspath('model/lib/latentdiff'))

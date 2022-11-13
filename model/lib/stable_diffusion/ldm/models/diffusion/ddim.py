@@ -1,4 +1,3 @@
-# Created by Chen Henry Wu
 """SAMPLING ONLY."""
 
 import torch

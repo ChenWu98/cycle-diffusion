@@ -1,4 +1,3 @@
-# Created by Chen Henry Wu
 import numpy as np
 import torch
 import cv2

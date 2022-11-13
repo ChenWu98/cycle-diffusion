@@ -1,4 +1,3 @@
-# Created by Chen Henry Wu
 import torch
 import torchvision.transforms as transforms
 

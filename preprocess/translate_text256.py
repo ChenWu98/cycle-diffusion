@@ -1,4 +1,3 @@
-# Created by Chen Henry Wu
 import os
 import torch
 import json

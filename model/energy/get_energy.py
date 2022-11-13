@@ -1,4 +1,3 @@
-# Created by Chen Henry Wu
 
 
 def get_energy(name, energy_kwargs, gan_wrapper):

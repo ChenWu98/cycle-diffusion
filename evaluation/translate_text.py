@@ -1,4 +1,3 @@
-# Created by Chen Henry Wu
 import os
 import torch
 from tqdm import tqdm

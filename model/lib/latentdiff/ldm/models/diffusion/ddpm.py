@@ -535,7 +535,7 @@ class LatentDiffusion(DDPM):
     def get_first_stage_encoding(self, encoder_posterior):
         if isinstance(encoder_posterior, DiagonalGaussianDistribution):
             # z = encoder_posterior.sample()
-            z = encoder_posterior.mean  # TODO: modified by Chen Henry Wu.
+            z = encoder_posterior.mean
         elif isinstance(encoder_posterior, torch.Tensor):
             z = encoder_posterior
         else:

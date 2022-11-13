@@ -1,4 +1,3 @@
-# Created by Chen Henry Wu
 import math
 from typing import Dict
 from copy import deepcopy

@@ -1,4 +1,3 @@
-# Created by Chen Henry Wu
 import torchvision.transforms.functional as TF
 
 

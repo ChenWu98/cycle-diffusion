@@ -1,4 +1,3 @@
-# Created by Chen Henry Wu
 from dataclasses import dataclass, field
 from transformers import TrainingArguments
 

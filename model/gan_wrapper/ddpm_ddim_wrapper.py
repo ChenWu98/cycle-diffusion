@@ -1,4 +1,3 @@
-# Created by Chen Henry Wu
 import os
 import argparse
 import yaml
@@ -229,7 +228,6 @@ def denoising_step_with_eps(xt, eps, t, t_next, *,
 
 
 def compute_eps(xt, xt_next, t, t_next, models, sampling_type, b, logvars, eta, learn_sigma):
-    # TODO: Chen Henry Wu
 
     assert eta is None or eta > 0
     # Compute noise and variance
@@ -283,7 +281,6 @@ def compute_eps(xt, xt_next, t, t_next, models, sampling_type, b, logvars, eta, 
 
 
 def sample_xt_next(x0, xt, t, t_next, sampling_type, b, eta):
-    # TODO: Chen Henry Wu
     bt = extract(b, t, xt.shape)  # bt is the \beta_t
     at = extract((1.0 - b).cumprod(dim=0), t, xt.shape)  # at is the \hat{\alpha}_t (DDIM does not use \hat notation)
 
@@ -311,7 +308,6 @@ def sample_xt_next(x0, xt, t, t_next, sampling_type, b, eta):
 
 
 def sample_xt(x0, t, b):
-    # TODO: Chen Henry Wu
     at = extract((1.0 - b).cumprod(dim=0), t, x0.shape)  # at is the \hat{\alpha}_t
     print('at', at)
     xt = at.sqrt() * x0 + (1 - at).sqrt() * torch.randn_like(x0)

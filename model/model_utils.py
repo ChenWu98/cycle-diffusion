@@ -1,4 +1,3 @@
-# Created by Chen Henry Wu
 MAX_SAMPLE_SIZE = 4096
 
 

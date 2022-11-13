@@ -1,4 +1,3 @@
-# Created by Chen Henry Wu
 
 
 def get_gan_wrapper(args, target=False):
