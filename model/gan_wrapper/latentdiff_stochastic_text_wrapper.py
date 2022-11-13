@@ -77,7 +77,7 @@ def make_convolutional_sample_with_eps_conditional(model, custom_steps, eta, x_T
 
 
 def ddpm_ddim_encoding_conditional(model, steps, shape, eta, white_box_steps, skip_steps, x0, scale, text):
-    with model.ema_scope("Plotting"):   # TODO: important
+    with model.ema_scope("Plotting"):
         ddim = DDIMSampler(model)
         bs = shape[0]
         shape = shape[1:]
@@ -90,7 +90,7 @@ def ddpm_ddim_encoding_conditional(model, steps, shape, eta, white_box_steps, sk
                                          eta=eta,
                                          white_box_steps=white_box_steps,
                                          skip_steps=skip_steps,
-                                         verbose=True,  # TODO: verbose.
+                                         verbose=True,
                                          x0=x0,
                                          unconditional_guidance_scale=scale,
                                          unconditional_conditioning=uc,

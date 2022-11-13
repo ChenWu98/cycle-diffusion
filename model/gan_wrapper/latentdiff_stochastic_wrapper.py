@@ -173,7 +173,7 @@ def ddpm_ddim_encoding_conditional(model, steps, shape, eta, white_box_steps, x0
                                          shape=shape,
                                          eta=eta,
                                          white_box_steps=white_box_steps,
-                                         verbose=True,  # TODO: verbose.
+                                         verbose=True,
                                          x0=x0,
                                          unconditional_guidance_scale=scale,
                                          unconditional_conditioning=uc,

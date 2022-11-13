@@ -320,13 +320,13 @@ class DDPMDDIMWrapper(torch.nn.Module):
                  refine_steps=0, refine_iterations=1, eta=None, t_0=None, enforce_class_input=None):
         super(DDPMDDIMWrapper, self).__init__()
 
-        self.enforce_class_input = enforce_class_input  # TODO
+        self.enforce_class_input = enforce_class_input
         self.custom_steps = custom_steps
         self.refine_steps = refine_steps
         self.refine_iterations = refine_iterations
         self.sample_type = sample_type
         self.eta = eta
-        self.t_0 = t_0 if t_0 is not None else 999  # TODO
+        self.t_0 = t_0 if t_0 is not None else 999
         self.es_steps = es_steps
 
         if self.sample_type == 'ddim':
@@ -369,7 +369,7 @@ class DDPMDDIMWrapper(torch.nn.Module):
             print("Original diffusion Model loaded.")
         elif config.data.dataset in ["FFHQ", "AFHQ", "IMAGENET"]:
             self.generator = i_DDPM(config.data.dataset)
-            self.learn_sigma = False  # TODO
+            self.learn_sigma = False
             self.logvar = np.log(np.maximum(posterior_variance, 1e-20))
             print("Improved diffusion Model loaded.")
         else:
@@ -432,7 +432,7 @@ class DDPMDDIMWrapper(torch.nn.Module):
                 img = x
             else:
                 for r in range(self.refine_iterations):
-                    refine_eta = 1  # TODO
+                    refine_eta = 1
                     # Sample xt
                     t = (torch.ones(bsz) * self.refine_steps - 1).to(self.device)
                     xt = sample_xt(x0=x, t=t, b=self.betas)
@@ -498,7 +498,7 @@ class DDPMDDIMWrapper(torch.nn.Module):
                             sampling_type=self.sample_type,
                             b=self.betas,
                             eta=self.eta,
-                        )  # TODO: based on x0 and current xt
+                        )
                         eps = compute_eps(
                             xt=xt,
                             xt_next=xt_next,
@@ -510,13 +510,12 @@ class DDPMDDIMWrapper(torch.nn.Module):
                             logvars=self.logvar,
                             eta=self.eta,
                             learn_sigma=self.learn_sigma,
-                        )  # TODO: based on generator, xt, and xt_next
+                        )
                         print(it, (eps ** 2).sum().item())
                         xt = xt_next
                         z_list.append(eps)
                     else:
                         break
-                print('((xt_next - x0) ** 2).sum().item()', ((xt_next - x0) ** 2).sum().item())  # TODO: remove.
 
             z = torch.stack(z_list, dim=1).view(bsz, -1)
             assert z.shape[1] == self.latent_dim
