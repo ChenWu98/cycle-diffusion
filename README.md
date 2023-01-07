@@ -118,7 +118,6 @@ cd stable_diffusion/
 2. Latent Diffusion Model
 ```shell
 cd ckpts/
-cd ckpts/
 wget https://www.dropbox.com/s/9lpdgs83l7tjk6c/ldm_models.zip
 unzip ldm_models.zip
 cd ldm_models/
