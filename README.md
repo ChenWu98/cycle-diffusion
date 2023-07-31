@@ -4,11 +4,11 @@ Official PyTorch implementation of (**Sections 4.1** and **4.2** of) our paper <
 **Unifying Diffusion Models' Latent Space, with Applications to CycleDiffusion and Guidance** <br>
 Chen Henry Wu, Fernando De la Torre <br>
 Carnegie Mellon University <br>
-_Preprint, Oct 2022_
+_Preprint, Oct 2022_ <br>
+_A modified version of this paper is accepted to [ICCV 2023](https://iccv2023.thecvf.com/)_
 
 [**[Paper link]**](https://arxiv.org/abs/2210.05559) | [**[Diffusers 🧨 implementation]**](https://huggingface.co/docs/diffusers/main/en/api/pipelines/cycle_diffusion) | [**[HuggingFace 🤗 demo]**](https://huggingface.co/spaces/ChenWu98/Stable-CycleDiffusion)
 
-A modified version of this paper is accepted to [ICCV 2023](https://iccv2023.thecvf.com/).
 
 ## Updates
 **[Oct 13 2022]** Code released.
