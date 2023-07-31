@@ -6,8 +6,9 @@ Chen Henry Wu, Fernando De la Torre <br>
 Carnegie Mellon University <br>
 _Preprint, Oct 2022_
 
-
 [**[Paper link]**](https://arxiv.org/abs/2210.05559) | [**[Diffusers 🧨 implementation]**](https://huggingface.co/docs/diffusers/main/en/api/pipelines/cycle_diffusion) | [**[HuggingFace 🤗 demo]**](https://huggingface.co/spaces/ChenWu98/Stable-CycleDiffusion)
+
+A modified version of this paper is accepted to [ICCV 2023](https://iccv2023.thecvf.com/).
 
 ## Updates
 **[Oct 13 2022]** Code released.
@@ -17,7 +18,6 @@ _Preprint, Oct 2022_
 **[Nov 9 2022]** CycleDiffusion is now available as a pipeline on HuggingFace 🤗 [Diffusers](https://github.com/huggingface/diffusers) 🧨. Please check the [pipeline doc](https://huggingface.co/docs/diffusers/main/en/api/pipelines/cycle_diffusion). The CycleDiffusion pipeline supports [Cross Attention Control](https://arxiv.org/abs/2208.01626) (CAC). 
 
 **[Nov 10 2022]** A demo built with HuggingFace 🤗 Spaces is available at [Stable CycleDiffusion](https://huggingface.co/spaces/ChenWu98/Stable-CycleDiffusion). CAC is supported. 
-
 
 ## Notes
 1. **Section 4.3** of this paper is open-sourced at [Unified Generative Zoo](https://github.com/ChenWu98/unified-generative-zoo).
