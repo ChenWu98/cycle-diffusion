@@ -131,6 +131,7 @@ wget https://www.dropbox.com/s/7pdttimz78ll0km/txt2img-1p4B-eval.yaml
 cd ckpts/
 mkdir ddpm
 cd ddpm/
+# Update Aug 4, 2023: it seems that the link below, originally from SDEdit, is broken. Please find other sources for CelebA-HQ (cf. issue #24)
 wget https://image-editing-test-12345.s3-us-west-2.amazonaws.com/checkpoints/celeba_hq.ckpt
 wget https://www.dropbox.com/s/g4h8sv07i3hj83d/ffhq_10m.pt
 wget https://www.dropbox.com/s/u74w8vaw1f8lc4k/afhq_dog_4m.pt
