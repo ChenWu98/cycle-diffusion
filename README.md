@@ -13,11 +13,9 @@ _A modified version of this paper is accepted to [ICCV 2023](https://iccv2023.th
 ## Updates
 **[Oct 13 2022]** Code released.
 
-**[Oct 16 2022]** Updated [customized use](#customized-use-for-zero-shot-image-to-image-translation) for zero-shot image editing.
+**[Nov 9 2022]** CycleDiffusion is now available as a pipeline on HuggingFace 🤗 [Diffusers](https://github.com/huggingface/diffusers) 🧨. Please check the [pipeline doc](https://huggingface.co/docs/diffusers/main/en/api/pipelines/cycle_diffusion). 
 
-**[Nov 9 2022]** CycleDiffusion is now available as a pipeline on HuggingFace 🤗 [Diffusers](https://github.com/huggingface/diffusers) 🧨. Please check the [pipeline doc](https://huggingface.co/docs/diffusers/main/en/api/pipelines/cycle_diffusion). The CycleDiffusion pipeline supports [Cross Attention Control](https://arxiv.org/abs/2208.01626) (CAC). 
-
-**[Nov 10 2022]** A demo built with HuggingFace 🤗 Spaces is available at [Stable CycleDiffusion](https://huggingface.co/spaces/ChenWu98/Stable-CycleDiffusion). CAC is supported. 
+**[Nov 10 2022]** A demo built with HuggingFace 🤗 Spaces is available at [Stable CycleDiffusion](https://huggingface.co/spaces/ChenWu98/Stable-CycleDiffusion). 
 
 ## Overview
 We think the randomness in diffusion models is like magic! Accumulated evidence has shown that fixing the "random seed" helps diffusion models generate images from two image distributions with minimal differences. Our paper is exactly about **how to formalize this "random seed"** and **how to infer it from a given real image**. 
@@ -69,7 +67,7 @@ Here are some comparisons with baselines.
 
 ## Dependencies
 
-1. Create environment by running
+1. Create an environment by running
 ```shell
 conda env create -f environment.yml
 conda activate generative_prompt
@@ -267,16 +265,12 @@ If you find this repository helpful, please cite as
 }
 ```
 
-## Potential Societal Impact
-Pre-trained on large-scale text-image pair, text-to-image diffusion models may learn unintended biases, which can be reflected or even amplified by CycleDiffusion. We encourage researchers and practitioners to consider this risk when building and deploying systems upon our work. 
-
-
 ## License
 We use the X11 License. This license is identical to the MIT License, but with an extra sentence that prohibits using the copyright holders' names (Carnegie Mellon University in our case) for advertising or promotional purposes without written permission.
 
 ## Contact
-[Issues](https://github.com/ChenWu98/cycle-diffusion/issues) are welcome if you have any question about the code. 
-If you would like to discuss the method, please contact [Chen Henry Wu](https://github.com/ChenWu98).
+[Issues](https://github.com/ChenWu98/cycle-diffusion/issues) are welcome if you have any questions about the code. 
+If you would like to discuss the method, please contact [Chen Henry Wu](https://chenwu.io/).
 
-<a href="https://github.com/ChenWu98"><img src="https://avatars.githubusercontent.com/u/28187501?v=4"  width="50" /></a>
+<a href="https://chenwu.io/"><img src="https://avatars.githubusercontent.com/u/28187501?v=4"  width="50" /></a>
 
