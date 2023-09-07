@@ -46,10 +46,8 @@ Here are some comparisons with baselines.
 </div>
 
 ## Contents
-- [CycleDiffusion: Text-to-Image Diffusion Models Are Image-to-Image Editors via Inferring "Random Seed"](#cyclediffusion-text-to-image-diffusion-models-are-image-to-image-editors-via-inferring-random-seed)
+- [CycleDiffusion](#cyclediffusion)
   - [Updates](#updates)
-  - [TODOs](#todos)
-  - [Notes](#notes)
   - [Overview](#overview)
   - [Contents](#contents)
   - [Dependencies](#dependencies)
