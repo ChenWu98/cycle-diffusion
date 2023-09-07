@@ -16,7 +16,7 @@ _ICCV 2023_ <br>
 
 
 ## Updates
-**[Oct 13 2022]** Code released.
+**[Oct 13 2022]** Code released. Section 4.3 of the earliest ArXiv version is open-sourced at [Unified Generative Zoo](https://github.com/ChenWu98/unified-generative-zoo).
 
 **[Nov 9 2022]** CycleDiffusion is now available as a pipeline on HuggingFace 🤗 [Diffusers](https://github.com/huggingface/diffusers) 🧨. Please check the [pipeline doc](https://huggingface.co/docs/diffusers/main/en/api/pipelines/cycle_diffusion). 
 
