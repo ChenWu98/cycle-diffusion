@@ -1,11 +1,16 @@
 # CycleDiffusion
 
-Official PyTorch implementation of our paper <br>
+Official PyTorch implementation of our paper:<br>
 **Unifying Diffusion Models' Latent Space, with Applications to CycleDiffusion and Guidance** <br>
 Chen Henry Wu, Fernando De la Torre <br>
 Carnegie Mellon University <br>
 _Preprint, Oct 2022_ <br>
-_A modified version of this paper is accepted to [ICCV 2023](https://iccv2023.thecvf.com/)_
+
+A modified version of this paper is accepted to [ICCV 2023](https://iccv2023.thecvf.com/):<br>
+**A Latent Space of Stochastic Diffusion Models for Zero-Shot Image Editing and Guidance** <br>
+Chen Henry Wu, Fernando De la Torre <br>
+Carnegie Mellon University <br>
+_ICCV 2023_ <br>
 
 [**[Paper link]**](https://arxiv.org/abs/2210.05559) | [**[Diffusers 🧨 implementation]**](https://huggingface.co/docs/diffusers/main/en/api/pipelines/cycle_diffusion) | [**[HuggingFace 🤗 demo]**](https://huggingface.co/spaces/ChenWu98/Stable-CycleDiffusion)
 
@@ -253,13 +258,22 @@ nohup python -m torch.distributed.launch --nproc_per_node 1 --master_port 1498 m
 
 
 ## Citation
-If you find this repository helpful, please cite as
+If you find this repository helpful, please cite it as
 ```
-@inproceedings{unifydiffusion2022,
+@inproceedings{cyclediffusion,
   title={Unifying Diffusion Models' Latent Space, with Applications to {CycleDiffusion} and Guidance},
   author={Chen Henry Wu and Fernando De la Torre},
   booktitle={ArXiv},
   year={2022},
+}
+```
+or
+```
+@inproceedings{cyclediffusion,
+  title={A Latent Space of Stochastic Diffusion Models for Zero-Shot Image Editing and Guidance},
+  author={Chen Henry Wu and Fernando De la Torre},
+  booktitle={ICCV},
+  year={2023},
 }
 ```
 
