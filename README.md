@@ -12,8 +12,7 @@ Chen Henry Wu, Fernando De la Torre <br>
 Carnegie Mellon University <br>
 _ICCV 2023_ <br>
 
-[**[Paper link]**](https://arxiv.org/abs/2210.05559) | [**[Diffusers 🧨 implementation]**](https://huggingface.co/docs/diffusers/main/en/api/pipelines/cycle_diffusion) | [**[HuggingFace 🤗 demo]**](https://huggingface.co/spaces/ChenWu98/Stable-CycleDiffusion)
-
+[**[Paper link]**](https://arxiv.org/abs/2210.05559) | [**[ICCV version]**](https://openaccess.thecvf.com/content/ICCV2023/papers/Wu_A_Latent_Space_of_Stochastic_Diffusion_Models_for_Zero-Shot_Image_ICCV_2023_paper.pdf) | [**[Diffusers 🧨 implementation]**](https://huggingface.co/docs/diffusers/main/en/api/pipelines/cycle_diffusion) | [**[HuggingFace 🤗 demo]**](https://huggingface.co/spaces/ChenWu98/Stable-CycleDiffusion)
 
 ## Updates
 **[Oct 13 2022]** Code released. Section 4.3 of the earliest ArXiv version is open-sourced at [Unified Generative Zoo](https://github.com/ChenWu98/unified-generative-zoo).
