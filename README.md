@@ -1,5 +1,11 @@
 # CycleDiffusion
 
+<br> 
+<div align=center>
+    <img src="docs/teaser.png" align="middle", width=900>
+</div>
+<br> 
+
 Official PyTorch implementation of our paper:<br>
 **Unifying Diffusion Models' Latent Space, with Applications to CycleDiffusion and Guidance** <br>
 Chen Henry Wu, Fernando De la Torre <br>
